@@ -15,7 +15,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.paulj.saufautomat.R;
+
 
 import java.util.Random;
 
@@ -111,7 +111,9 @@ public class Shotmuehle extends Activity implements View.OnClickListener {
             @Override
             public void onAnimationEnd(Animation animation) {
                  value = randomDiceValue();
-                int res = getResources().getIdentifier("dice_" + value, "drawable", "com.example.paulj.saufautomat");
+                int res = getResources().getIdentifier(getPackageName()+":drawable/" +"dice_"+value, null, null);
+
+
 
 
                 if(animation == anim1){
@@ -202,7 +204,7 @@ public class Shotmuehle extends Activity implements View.OnClickListener {
             }
         }if(value==4){
             if(shots[3]==true){
-                Log.d("Hi","Hallo");
+
                 Animation animFadeIn = AnimationUtils.loadAnimation(this, R.anim.fadein);
 
                 shots[3]=false;

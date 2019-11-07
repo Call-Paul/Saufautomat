@@ -10,7 +10,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.paulj.saufautomat.R;
+
 
 public class MainActivity extends AppCompatActivity {
 Button btn8,btnm,btnq,btnn;
