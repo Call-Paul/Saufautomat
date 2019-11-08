@@ -29,7 +29,7 @@ public class Acht extends AppCompatActivity {
     Animation animleft,animleft2,animleft3,animleft4,animtop,animbottom,animright;
     Button btn_help,btn_exit,btn_next,btn_hide;
     public boolean visible=true;
-    public static int current_card;
+    public static int current_card=0;
     ArrayList<String> stapel = new ArrayList<String>();
     TextView help;
     ConstraintLayout l;
@@ -45,6 +45,7 @@ public class Acht extends AppCompatActivity {
         setContentView(R.layout.activity_acht);
         getSupportActionBar().hide();
         fillStack();
+
         animleft= AnimationUtils.loadAnimation(this,R.anim.fromleft);
         animleft2= AnimationUtils.loadAnimation(this,R.anim.fromleft2);
         animleft3= AnimationUtils.loadAnimation(this,R.anim.fromleft3);
@@ -107,10 +108,12 @@ public class Acht extends AppCompatActivity {
         });
 
         btn_hide=(Button)findViewById(R.id.btn_hide);
+        btn_hide.setEnabled(false);
         btn_hide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(visible==true){
+
 
 
 
